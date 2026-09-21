@@ -1,0 +1,18 @@
+{
+  "name": "tag-static-blog",
+  "version": "1.0.0",
+  "description": "标签静态博客 - 纯前端原生HTML+CSS+JS实现",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-data.js",
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

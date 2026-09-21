@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="标签静态博客 - 记录技术、生活与思考">
+  <title>标签静态博客</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p>加载中...</p>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="#/" class="logo">
+        <span class="logo-icon">📝</span>
+        <span class="logo-text">标签静态博客</span>
+      </a>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索文章、标签、作者..." autocomplete="off">
+          <span class="search-icon">🔍</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle" title="切换主题">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+    <nav class="category-tabs" id="categoryTabs">
+      <div class="category-tabs-scroll">
+        <a href="#/" class="category-tab active" data-category="all">全部</a>
+        <a href="#/category/技术" class="category-tab" data-category="技术">💻 技术</a>
+        <a href="#/category/生活" class="category-tab" data-category="生活">🏠 生活</a>
+        <a href="#/category/随笔" class="category-tab" data-category="随笔">📖 随笔</a>
+        <a href="#/category/读书" class="category-tab" data-category="读书">📚 读书</a>
+        <a href="#/category/旅行" class="category-tab" data-category="旅行">✈️ 旅行</a>
+        <a href="#/category/美食" class="category-tab" data-category="美食">🍜 美食</a>
+        <a href="#/category/思考" class="category-tab" data-category="思考">💭 思考</a>
+        <a href="#/category/影评" class="category-tab" data-category="影评">🎬 影评</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <aside class="sidebar" id="sidebar">
+      <section class="sidebar-section">
+        <h3 class="sidebar-title">
+          <span>🏷️</span>
+          <span>标签云</span>
+        </h3>
+        <div class="tag-cloud" id="tagCloud"></div>
+      </section>
+
+      <section class="sidebar-section">
+        <h3 class="sidebar-title">
+          <span>📅</span>
+          <span>归档时间轴</span>
+        </h3>
+        <div class="archive-timeline" id="archiveTimeline"></div>
+      </section>
+    </aside>
+
+    <section class="content-area">
+      <div class="filter-bar">
+        <div class="filter-info" id="filterInfo"></div>
+        <div class="sort-group">
+          <span class="sort-label">排序：</span>
+          <button class="sort-btn active" data-sort="newest">最新</button>
+          <button class="sort-btn" data-sort="hottest">最热</button>
+          <button class="sort-btn" data-sort="most-comments">评论多</button>
+        </div>
+      </div>
+
+      <div class="home-view" id="homeView">
+        <div class="post-grid" id="postGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+          <div class="empty-icon">📭</div>
+          <h3>没有找到相关文章</h3>
+          <p>换个关键词试试吧</p>
+        </div>
+      </div>
+
+      <div class="detail-view" id="detailView" style="display:none;">
+        <a href="#/" class="back-btn">← 返回列表</a>
+        <article class="post-detail" id="postDetail"></article>
+
+        <section class="post-navigation" id="postNavigation"></section>
+
+        <section class="related-posts" id="relatedPosts"></section>
+
+        <section class="comments-section">
+          <h3 class="comments-title">💬 评论区</h3>
+          <div class="comment-form">
+            <input type="text" id="commentNickname" placeholder="您的昵称" maxlength="20">
+            <textarea id="commentContent" placeholder="写下您的评论..." rows="4" maxlength="500"></textarea>
+            <button class="submit-comment-btn" id="submitCommentBtn">发表评论</button>
+          </div>
+          <div class="comments-list" id="commentsList"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" title="回到顶部">
+    <span>↑</span>
+  </button>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 标签静态博客 · Powered by 原生HTML+CSS+JS</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
